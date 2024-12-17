@@ -9,23 +9,71 @@
 /* Begin PBXBuildFile section */
 		948E490E2D11E28000AD747A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948E490D2D11E28000AD747A /* AppDelegate.swift */; };
 		948E49102D11E28000AD747A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948E490F2D11E28000AD747A /* SceneDelegate.swift */; };
-		948E49122D11E28000AD747A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948E49112D11E28000AD747A /* ViewController.swift */; };
+		948E49122D11E28000AD747A /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948E49112D11E28000AD747A /* SignupViewController.swift */; };
 		948E49152D11E28000AD747A /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 948E49142D11E28000AD747A /* Base */; };
 		948E49182D11E28000AD747A /* friendListDemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 948E49162D11E28000AD747A /* friendListDemo.xcdatamodeld */; };
 		948E491A2D11E28100AD747A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 948E49192D11E28100AD747A /* Assets.xcassets */; };
 		948E491D2D11E28100AD747A /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 948E491C2D11E28100AD747A /* Base */; };
+		948E492F2D11EAC100AD747A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948E492E2D11EAC100AD747A /* LoginViewController.swift */; };
+		948E49322D11ECFC00AD747A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948E49312D11ECFC00AD747A /* HomeViewController.swift */; };
+		948E49352D11F38500AD747A /* GlobalFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948E49342D11F38500AD747A /* GlobalFunction.swift */; };
+		948E49382D11F4D700AD747A /* DatabaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948E49372D11F4D700AD747A /* DatabaseProvider.swift */; };
+		948E493B2D11F7F400AD747A /* SignupRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948E493A2D11F7F400AD747A /* SignupRepository.swift */; };
+		948E493D2D11F8B200AD747A /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948E493C2D11F8B200AD747A /* UserModel.swift */; };
+		948E49412D11FFC500AD747A /* LoginRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948E49402D11FFC500AD747A /* LoginRepository.swift */; };
+		948E49462D12027300AD747A /* ApiProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948E49452D12027300AD747A /* ApiProvider.swift */; };
+		948E49542D12044700AD747A /* RandomUserId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948E49482D12044600AD747A /* RandomUserId.swift */; };
+		948E49552D12044700AD747A /* RandomUserPicture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948E49492D12044600AD747A /* RandomUserPicture.swift */; };
+		948E49562D12044700AD747A /* RandomUserTimezone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948E494A2D12044600AD747A /* RandomUserTimezone.swift */; };
+		948E49572D12044700AD747A /* RandomUserName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948E494B2D12044700AD747A /* RandomUserName.swift */; };
+		948E49582D12044700AD747A /* RandomUserCoordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948E494C2D12044700AD747A /* RandomUserCoordinate.swift */; };
+		948E49592D12044700AD747A /* RandomUserLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948E494D2D12044700AD747A /* RandomUserLocation.swift */; };
+		948E495A2D12044700AD747A /* RandomUserDob.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948E494E2D12044700AD747A /* RandomUserDob.swift */; };
+		948E495B2D12044700AD747A /* RandomUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948E494F2D12044700AD747A /* RandomUserModel.swift */; };
+		948E495C2D12044700AD747A /* RandomUserResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948E49502D12044700AD747A /* RandomUserResult.swift */; };
+		948E495D2D12044700AD747A /* RandomUserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948E49512D12044700AD747A /* RandomUserInfo.swift */; };
+		948E495E2D12044700AD747A /* RandomUserStreet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948E49522D12044700AD747A /* RandomUserStreet.swift */; };
+		948E495F2D12044700AD747A /* RandomUserLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948E49532D12044700AD747A /* RandomUserLogin.swift */; };
+		948E49612D12059100AD747A /* HomeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948E49602D12059100AD747A /* HomeRepository.swift */; };
+		948E49652D12088B00AD747A /* FriendTemplateViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 948E49642D12088B00AD747A /* FriendTemplateViewCell.xib */; };
+		948E49662D12088B00AD747A /* FriendTemplateViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948E49632D12088B00AD747A /* FriendTemplateViewCell.swift */; };
+		948E496A2D1215EE00AD747A /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948E49692D1215EE00AD747A /* SplashViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		948E490A2D11E28000AD747A /* friendListDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = friendListDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		948E490D2D11E28000AD747A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		948E490F2D11E28000AD747A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		948E49112D11E28000AD747A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		948E49112D11E28000AD747A /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		948E49142D11E28000AD747A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		948E49172D11E28000AD747A /* friendListDemo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = friendListDemo.xcdatamodel; sourceTree = "<group>"; };
 		948E49192D11E28100AD747A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		948E491C2D11E28100AD747A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		948E491E2D11E28100AD747A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		948E492E2D11EAC100AD747A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		948E49312D11ECFC00AD747A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		948E49342D11F38500AD747A /* GlobalFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalFunction.swift; sourceTree = "<group>"; };
+		948E49372D11F4D700AD747A /* DatabaseProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseProvider.swift; sourceTree = "<group>"; };
+		948E493A2D11F7F400AD747A /* SignupRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupRepository.swift; sourceTree = "<group>"; };
+		948E493C2D11F8B200AD747A /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		948E49402D11FFC500AD747A /* LoginRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRepository.swift; sourceTree = "<group>"; };
+		948E49452D12027300AD747A /* ApiProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiProvider.swift; sourceTree = "<group>"; };
+		948E49482D12044600AD747A /* RandomUserId.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomUserId.swift; sourceTree = "<group>"; };
+		948E49492D12044600AD747A /* RandomUserPicture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomUserPicture.swift; sourceTree = "<group>"; };
+		948E494A2D12044600AD747A /* RandomUserTimezone.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomUserTimezone.swift; sourceTree = "<group>"; };
+		948E494B2D12044700AD747A /* RandomUserName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomUserName.swift; sourceTree = "<group>"; };
+		948E494C2D12044700AD747A /* RandomUserCoordinate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomUserCoordinate.swift; sourceTree = "<group>"; };
+		948E494D2D12044700AD747A /* RandomUserLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomUserLocation.swift; sourceTree = "<group>"; };
+		948E494E2D12044700AD747A /* RandomUserDob.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomUserDob.swift; sourceTree = "<group>"; };
+		948E494F2D12044700AD747A /* RandomUserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomUserModel.swift; sourceTree = "<group>"; };
+		948E49502D12044700AD747A /* RandomUserResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomUserResult.swift; sourceTree = "<group>"; };
+		948E49512D12044700AD747A /* RandomUserInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomUserInfo.swift; sourceTree = "<group>"; };
+		948E49522D12044700AD747A /* RandomUserStreet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomUserStreet.swift; sourceTree = "<group>"; };
+		948E49532D12044700AD747A /* RandomUserLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomUserLogin.swift; sourceTree = "<group>"; };
+		948E49602D12059100AD747A /* HomeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRepository.swift; sourceTree = "<group>"; };
+		948E49632D12088B00AD747A /* FriendTemplateViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendTemplateViewCell.swift; sourceTree = "<group>"; };
+		948E49642D12088B00AD747A /* FriendTemplateViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FriendTemplateViewCell.xib; sourceTree = "<group>"; };
+		948E49692D1215EE00AD747A /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +106,216 @@
 		948E490C2D11E28000AD747A /* friendListDemo */ = {
 			isa = PBXGroup;
 			children = (
-				948E490D2D11E28000AD747A /* AppDelegate.swift */,
-				948E490F2D11E28000AD747A /* SceneDelegate.swift */,
-				948E49112D11E28000AD747A /* ViewController.swift */,
-				948E49132D11E28000AD747A /* Main.storyboard */,
+				948E49282D11E39700AD747A /* Storyboard */,
+				948E49272D11E37000AD747A /* Provider */,
+				948E49262D11E36400AD747A /* Resource */,
+				948E49252D11E35700AD747A /* Screens */,
+				948E49242D11E33F00AD747A /* Delegate */,
 				948E49192D11E28100AD747A /* Assets.xcassets */,
 				948E491B2D11E28100AD747A /* LaunchScreen.storyboard */,
 				948E491E2D11E28100AD747A /* Info.plist */,
 				948E49162D11E28000AD747A /* friendListDemo.xcdatamodeld */,
 			);
 			path = friendListDemo;
+			sourceTree = "<group>";
+		};
+		948E49242D11E33F00AD747A /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				948E490D2D11E28000AD747A /* AppDelegate.swift */,
+				948E490F2D11E28000AD747A /* SceneDelegate.swift */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
+		948E49252D11E35700AD747A /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				948E49672D1215C600AD747A /* SplashScreen */,
+				948E49292D11E3B500AD747A /* SignupScreen */,
+				948E492A2D11E3DD00AD747A /* LoginScreen */,
+				948E492B2D11E3E900AD747A /* HomeScreen */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		948E49262D11E36400AD747A /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				948E49342D11F38500AD747A /* GlobalFunction.swift */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		948E49272D11E37000AD747A /* Provider */ = {
+			isa = PBXGroup;
+			children = (
+				948E49442D12025800AD747A /* APIProvider */,
+				948E49362D11F4C000AD747A /* DataBaseProvider */,
+			);
+			path = Provider;
+			sourceTree = "<group>";
+		};
+		948E49282D11E39700AD747A /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				948E49132D11E28000AD747A /* Main.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		948E49292D11E3B500AD747A /* SignupScreen */ = {
+			isa = PBXGroup;
+			children = (
+				948E49392D11F7DF00AD747A /* Repository */,
+				948E49332D11F31400AD747A /* Model */,
+				948E492C2D11E3F600AD747A /* Controller */,
+			);
+			path = SignupScreen;
+			sourceTree = "<group>";
+		};
+		948E492A2D11E3DD00AD747A /* LoginScreen */ = {
+			isa = PBXGroup;
+			children = (
+				948E493E2D11FF5000AD747A /* Repository */,
+				948E492D2D11EA9400AD747A /* Controller */,
+			);
+			path = LoginScreen;
+			sourceTree = "<group>";
+		};
+		948E492B2D11E3E900AD747A /* HomeScreen */ = {
+			isa = PBXGroup;
+			children = (
+				948E49622D12085100AD747A /* Cell */,
+				948E49432D12020F00AD747A /* Model */,
+				948E49422D1201FE00AD747A /* Repository */,
+				948E49302D11ECE500AD747A /* Controller */,
+			);
+			path = HomeScreen;
+			sourceTree = "<group>";
+		};
+		948E492C2D11E3F600AD747A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				948E49112D11E28000AD747A /* SignupViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		948E492D2D11EA9400AD747A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				948E492E2D11EAC100AD747A /* LoginViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		948E49302D11ECE500AD747A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				948E49312D11ECFC00AD747A /* HomeViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		948E49332D11F31400AD747A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				948E493C2D11F8B200AD747A /* UserModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		948E49362D11F4C000AD747A /* DataBaseProvider */ = {
+			isa = PBXGroup;
+			children = (
+				948E49372D11F4D700AD747A /* DatabaseProvider.swift */,
+			);
+			path = DataBaseProvider;
+			sourceTree = "<group>";
+		};
+		948E49392D11F7DF00AD747A /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				948E493A2D11F7F400AD747A /* SignupRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		948E493E2D11FF5000AD747A /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				948E49402D11FFC500AD747A /* LoginRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		948E49422D1201FE00AD747A /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				948E49602D12059100AD747A /* HomeRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		948E49432D12020F00AD747A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				948E49472D12042900AD747A /* RandomUserModel */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		948E49442D12025800AD747A /* APIProvider */ = {
+			isa = PBXGroup;
+			children = (
+				948E49452D12027300AD747A /* ApiProvider.swift */,
+			);
+			path = APIProvider;
+			sourceTree = "<group>";
+		};
+		948E49472D12042900AD747A /* RandomUserModel */ = {
+			isa = PBXGroup;
+			children = (
+				948E494C2D12044700AD747A /* RandomUserCoordinate.swift */,
+				948E494E2D12044700AD747A /* RandomUserDob.swift */,
+				948E49482D12044600AD747A /* RandomUserId.swift */,
+				948E49512D12044700AD747A /* RandomUserInfo.swift */,
+				948E494D2D12044700AD747A /* RandomUserLocation.swift */,
+				948E49532D12044700AD747A /* RandomUserLogin.swift */,
+				948E494F2D12044700AD747A /* RandomUserModel.swift */,
+				948E494B2D12044700AD747A /* RandomUserName.swift */,
+				948E49492D12044600AD747A /* RandomUserPicture.swift */,
+				948E49502D12044700AD747A /* RandomUserResult.swift */,
+				948E49522D12044700AD747A /* RandomUserStreet.swift */,
+				948E494A2D12044600AD747A /* RandomUserTimezone.swift */,
+			);
+			path = RandomUserModel;
+			sourceTree = "<group>";
+		};
+		948E49622D12085100AD747A /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				948E49632D12088B00AD747A /* FriendTemplateViewCell.swift */,
+				948E49642D12088B00AD747A /* FriendTemplateViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		948E49672D1215C600AD747A /* SplashScreen */ = {
+			isa = PBXGroup;
+			children = (
+				948E49682D1215D100AD747A /* Controller */,
+			);
+			path = SplashScreen;
+			sourceTree = "<group>";
+		};
+		948E49682D1215D100AD747A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				948E49692D1215EE00AD747A /* SplashViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -130,6 +378,7 @@
 			files = (
 				948E491A2D11E28100AD747A /* Assets.xcassets in Resources */,
 				948E491D2D11E28100AD747A /* Base in Resources */,
+				948E49652D12088B00AD747A /* FriendTemplateViewCell.xib in Resources */,
 				948E49152D11E28000AD747A /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -141,10 +390,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				948E49572D12044700AD747A /* RandomUserName.swift in Sources */,
+				948E495D2D12044700AD747A /* RandomUserInfo.swift in Sources */,
+				948E49582D12044700AD747A /* RandomUserCoordinate.swift in Sources */,
+				948E496A2D1215EE00AD747A /* SplashViewController.swift in Sources */,
 				948E49182D11E28000AD747A /* friendListDemo.xcdatamodeld in Sources */,
-				948E49122D11E28000AD747A /* ViewController.swift in Sources */,
+				948E49382D11F4D700AD747A /* DatabaseProvider.swift in Sources */,
+				948E49552D12044700AD747A /* RandomUserPicture.swift in Sources */,
+				948E49122D11E28000AD747A /* SignupViewController.swift in Sources */,
+				948E49352D11F38500AD747A /* GlobalFunction.swift in Sources */,
 				948E490E2D11E28000AD747A /* AppDelegate.swift in Sources */,
+				948E495F2D12044700AD747A /* RandomUserLogin.swift in Sources */,
+				948E493B2D11F7F400AD747A /* SignupRepository.swift in Sources */,
+				948E495A2D12044700AD747A /* RandomUserDob.swift in Sources */,
+				948E49542D12044700AD747A /* RandomUserId.swift in Sources */,
+				948E492F2D11EAC100AD747A /* LoginViewController.swift in Sources */,
+				948E49412D11FFC500AD747A /* LoginRepository.swift in Sources */,
+				948E49612D12059100AD747A /* HomeRepository.swift in Sources */,
+				948E49662D12088B00AD747A /* FriendTemplateViewCell.swift in Sources */,
+				948E495B2D12044700AD747A /* RandomUserModel.swift in Sources */,
 				948E49102D11E28000AD747A /* SceneDelegate.swift in Sources */,
+				948E49462D12027300AD747A /* ApiProvider.swift in Sources */,
+				948E493D2D11F8B200AD747A /* UserModel.swift in Sources */,
+				948E495C2D12044700AD747A /* RandomUserResult.swift in Sources */,
+				948E49562D12044700AD747A /* RandomUserTimezone.swift in Sources */,
+				948E49592D12044700AD747A /* RandomUserLocation.swift in Sources */,
+				948E49322D11ECFC00AD747A /* HomeViewController.swift in Sources */,
+				948E495E2D12044700AD747A /* RandomUserStreet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
