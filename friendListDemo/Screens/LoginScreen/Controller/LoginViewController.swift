@@ -19,7 +19,9 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.containerView.applyCornerRadius(to: [.topLeft , .topRight ], with: 24)
+        DispatchQueue.main.async {
+            self.containerView.applyCornerRadius(to: [.topLeft , .topRight ], with: 24)
+        }
     }
     
     @IBAction func signupBtnAction(_ sender: Any) {
@@ -32,7 +34,7 @@ class LoginViewController: UIViewController {
     @IBAction func loginBtnAction(_ sender: Any) {
         
         if validateFields() {
-            var userModel = UserModel(
+            let userModel = UserModel(
                 firstName: "",
                 LastName: "",
                 email: txtEmailField.text ?? "",
@@ -40,7 +42,7 @@ class LoginViewController: UIViewController {
             )
             self.loginRepo.loginUser(userModel: userModel) { isSuccess, message in
                 if isSuccess{
-                    
+                    GlobalFunction.shared.showToast(message: message)
                     guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "HomeViewController") as? HomeViewController else {
                         return
                     }

@@ -19,12 +19,14 @@ class LoginRepository {
         do {
             let user = try DatabaseProvider.shared.context.fetch(fetchRequest)
             
+            //password comparise with login information
             if user.count != 0 {
-                if user.first?.password == userModel.password {
+                // making sure to decrypt password to cross check
+                if GlobalFunction.shared.decrypt(encryptedText: user.first?.password ?? "") == userModel.password {
                     var userData = userModel
                     userData.userId = user.first?.userId ?? ""
                     GlobalFunction.shared.saveUserDetails(userModel: userData)
-                    completion(true, "")
+                    completion(true, "Login success")
                 }else{
                     completion(false, "Incorrect Password")
                 }

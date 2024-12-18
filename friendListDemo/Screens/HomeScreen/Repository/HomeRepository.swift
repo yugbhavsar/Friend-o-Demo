@@ -8,11 +8,21 @@
 import Foundation
 import CoreData
 
+// update UI every time while Fetching/Updating user
+protocol FetchFavoriteDelegate {
+    
+    func didFetchUserFavList()
+}
+
 class HomeRepository {
     
     var randomeUserResult = [RandomUserResult]()
     var favoirteUserResult = [RandomUserResult]()
+    var userFavEntityList = [UserFriend]() //specif required to remove fav user using Entity
+    
+    var delegate: FetchFavoriteDelegate?
     var isLoading: Bool = true
+    var selectedTab: Int = 0
     
     func fetchRandomUserList(completoin: @escaping  (()->Void)) {
         
@@ -39,16 +49,18 @@ class HomeRepository {
             
             do {
                 let results = try DatabaseProvider.shared.context.fetch(fetchRequest)
-                print(results.count)
+                self.userFavEntityList = results
                 for data in results {
                     if let friendData = data.value(forKey: "userFriend") as? Data {
-                        let userFriend = try NSKeyedUnarchiver.unarchivedObject(ofClass: RandomUserResult.self, from: friendData) as? RandomUserResult
-                        if let friend = userFriend {
-                            friendsList.append(friend)
+                        if let userFriend = try NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(friendData) as? RandomUserResult {
+                            friendsList.append(userFriend)
+                        } else {
+                            print("Failed to decode RandomUserResult.")
                         }
                     }
                 }
                 self.favoirteUserResult = friendsList
+                self.delegate?.didFetchUserFavList()
             } catch let error as NSError {
                 print("Could not fetch. \(error),")
             }
@@ -65,16 +77,28 @@ class HomeRepository {
             
             do {
                 let friendData = try NSKeyedArchiver.archivedData(withRootObject: friend, requiringSecureCoding: false)
-                
-                // Set values
+
                 userFriend.setValue(currentUserData.userId, forKey: "userId")
                 userFriend.setValue(friendData, forKey: "userFriend")
             
                 try DatabaseProvider.shared.context.save()
-                print("Friend saved successfully")
+                GlobalFunction.shared.showToast(message: "User added to favorite list")
+                self.fetchUserFriendList()
             } catch let error as NSError {
                 print("Could not save. \(error), \(error.userInfo)")
             }
         }
+    }
+    
+    func removeFromFavoriteList(favoriteUser: UserFriend) {
+        
+        do {
+            DatabaseProvider.shared.context.delete(favoriteUser)
+            DatabaseProvider.shared.saveContext()
+            self.fetchUserFriendList()
+        } catch let error as NSError {
+            print("Could not remove. \(error), \(error.userInfo)")
+        }
+        
     }
 }

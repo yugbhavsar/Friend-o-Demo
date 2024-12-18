@@ -12,12 +12,12 @@ class SplashViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        DispatchQueue.main.asyncAfter(deadline: .now()+5) {
+        DispatchQueue.main.asyncAfter(deadline: .now()+3) {
             self.navigationValidation()
         }
     }
     
-
+    // check for already login user
     func navigationValidation() {
         
         if GlobalFunction.shared.fetchUserModel() != nil {

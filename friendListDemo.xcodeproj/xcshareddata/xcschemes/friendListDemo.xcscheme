@@ -56,6 +56,11 @@
             value = "https://randomuser.me/api"
             isEnabled = "YES">
          </EnvironmentVariable>
+         <EnvironmentVariable
+            key = "secretKey"
+            value = "mySuperSecretKey123"
+            isEnabled = "YES">
+         </EnvironmentVariable>
       </EnvironmentVariables>
    </LaunchAction>
    <ProfileAction

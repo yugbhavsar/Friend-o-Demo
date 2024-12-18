@@ -20,6 +20,7 @@ class ApiProivder {
     
     func request (_ httpMethod: HttpMethod = .get, param:[String:Any] ,setParamAsbody: Bool = false,completion:@escaping (([String:Any]) -> Void)) {
         
+        // getting base url from Scheme Argument to make protected
         let baseUri = ProcessInfo.processInfo.environment["baseUrl"] ?? ""
         
         guard let url = URL(string: baseUri) else {

@@ -33,7 +33,7 @@ class SignupViewController: UIViewController {
     @IBAction func signUpBtnAction(_ sender: UIButton) {
         
         if validateFields() {
-            var userModel = UserModel(
+            let userModel = UserModel(
                 firstName: txtFirstNameField.text ?? "",
                 LastName: txtLastNameField.text ?? "",
                 email: txtEmailField.text ?? "",
@@ -42,6 +42,7 @@ class SignupViewController: UIViewController {
             self.singupRepo.addUser(user: userModel) { isSuccess,message in
                 if isSuccess {
                     self.moveToLoginScreen()
+                    GlobalFunction.shared.showToast(message: message)
                 }else{
                     self.showAlert(message: message)
                 }
@@ -80,7 +81,7 @@ class SignupViewController: UIViewController {
             return false
         }
         
-        return true // All fields are valid
+        return true
     }
 }
 

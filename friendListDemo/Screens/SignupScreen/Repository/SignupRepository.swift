@@ -11,7 +11,7 @@ import CoreData
 
 class SignupRepository {
     
-    
+    // to register User
     func addUser(user: UserModel , completion: @escaping ((Bool,String)->Void)) {
         if !checkForExitstingUser(byEmail: user.email) {
             
@@ -19,16 +19,17 @@ class SignupRepository {
             saveUser.firstName = user.firstName
             saveUser.lastName = user.LastName
             saveUser.email = user.email
-            saveUser.password = user.password
+            saveUser.password = GlobalFunction.shared.encrypt(plainText: user.password)
             saveUser.userId = UUID().uuidString
             
             DatabaseProvider.shared.saveContext()
-            completion(true,"")
+            completion(true,"User register successfully")
         }else{
             completion(false,"Email is already registered")
         }
     }
     
+    // checking if user already register with same email
     func checkForExitstingUser(byEmail: String) -> Bool {
         
         let fetchRequest: NSFetchRequest<User> = User.fetchRequest()
